@@ -2,8 +2,8 @@ package main
 
 import "net/http"
 
-func ReadinessHandler(w http.ResponseWriter, r *http.Request) {
+func ErrorHandler(w http.ResponseWriter, r *http.Request) {
 
-	respondWithJSON(w, http.StatusOK, map[string]string{"status": "ok"})
+	respondWithError(w, http.StatusInternalServerError, "Internal Server Error")
 
 }
