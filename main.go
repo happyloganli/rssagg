@@ -46,6 +46,7 @@ func main() {
 		log.Fatal("Can not connect to database: ", err)
 	}
 	defer db.Close()
+
 	// Run database migration
 	runMigrations(db)
 
